@@ -1,0 +1,51 @@
+{
+    "authentication_methods": {
+        "azuread": false,
+        "dev": true,
+        "email": true,
+        "github": true,
+        "google": true,
+        "ldap": false,
+        "password": true,
+        "remoteuser": false,
+        "saml": true
+    },
+    "email_auth_enabled": true,
+    "external_authentication_methods": [
+        {
+            "display_icon": null,
+            "display_name": "SAML",
+            "login_url": "/accounts/login/social/saml/idp_name",
+            "name": "saml:idp_name",
+            "signup_url": "/accounts/register/social/saml/idp_name"
+        },
+        {
+            "display_icon": "/static/images/authentication_backends/googl_e-icon.png",
+            "display_name": "Google",
+            "login_url": "/accounts/login/social/google",
+            "name": "google",
+            "signup_url": "/accounts/register/social/google"
+        },
+        {
+            "display_icon": "/static/images/authentication_backends/github-icon.png",
+            "display_name": "GitHub",
+            "login_url": "/accounts/login/social/github",
+            "name": "github",
+            "signup_url": "/accounts/register/social/github"
+        }
+    ],
+    "is_incompatible": false,
+    "msg": "",
+    "push_notifications_enabled": false,
+    "realm_description": "<p>The Zulip development environment default organization.  It's great for testing!</p>",
+    "realm_icon": "https://secure.gravatar.com/avatar/62429d594b6ffc712f54aee976a18b44?d=identicon",
+    "realm_name": "Zulip Dev",
+    "realm_uri": "https://chat.zulip.org",
+    "realm_url": "https://chat.zulip.org",
+    "realm_web_public_access_enabled": false,
+    "require_email_format_usernames": true,
+    "result": "success",
+    "zulip_merge_base": "5.0-dev-1646-gea6b21cd8c",
+    "zulip_version": "5.0-dev-1650-gc3fd37755f",
+    "zulip_feature_level": 500
+}

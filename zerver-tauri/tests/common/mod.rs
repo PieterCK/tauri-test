@@ -26,3 +26,8 @@ pub fn get_json_fixture_data(filename: &str) -> Value {
     let json: Value = from_str(&response_body).expect("Fail to read json file");
     json
 }
+
+pub async fn mock_default_server_settings_endpoint() -> MockServer {
+    let json = get_json_fixture_data("server_settings_complete_response.json");
+    mock_zulip_server(&json, 200, "/api/v1/server_settings").await
+}
