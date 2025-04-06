@@ -1,25 +1,11 @@
-import { invoke } from "@tauri-apps/api/core";
-
-let greetInputEl: HTMLInputElement | null;
-let greetMsgEl: HTMLElement | null;
-
-async function greet() {
-  if (greetMsgEl && greetInputEl) {
-    // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-    greetMsgEl.textContent = await invoke("greet", {
-      name: greetInputEl.value,
-    });
-  }
-}
+import $ from "jquery";
+import '../styles/styles.css';
+import { initRealmRegistrationForm } from "./realm_registration_form";
 
 window.addEventListener("DOMContentLoaded", () => {
-  greetInputEl = document.querySelector("#greet-input");
-  greetMsgEl = document.querySelector("#greet-msg");
-  document.querySelector("#greet-form")?.addEventListener("submit", (e) => {
-    e.preventDefault();
-    greet();
+  const $mainContainer = $("main.container")[0];
+  initRealmRegistrationForm({
+    $root: $mainContainer,
+    onChange: () => void {},
   });
-  if (greetMsgEl){
-    greetMsgEl.textContent = "asdasd"
-  }
 });
